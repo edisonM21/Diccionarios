@@ -6,39 +6,45 @@ while(opcion<=20):
 print(f'el contador quedo en: {opcion}')
 print(f'la suma quedo en: {suma}')'''
 
-print("///////////////////// MENU //////////////////////")
-print("1.Recibir votos \n\n")
-opcion=0
-opcion2=0
-senado=0
-camara=0
-pacto=0
-centro=0
-equipo=0
+print("Conteo De Votos\n\n")
 
-while(opcion!=4):
-    print("1.Senado")
-    print("2.camara")
-    print("3.consulta")
-    print("4.Salir")
+#inicializo variables de opcion
+opcion = 0
+opcion2 = 0
 
-    opcion=int(input("Ingrese una opcion: "))
-    if(opcion==1):
-        senado +=1
-    elif(opcion==2):
-        camara +=1
-    elif(opcion==3):
-        
-        print("1.pacto")
-        print("2.centro")
-        print("3.Derecha")
-        print("4.salir")
+#inicializo contadores
 
-        if opcion2==1:
-            pacto+=1
-        elif opcion2==2:
-            centro+=1
-        elif opcion2==3:
-            equipo+=1
+senado= 0
+camara = 0
+pacto = 0
+centro = 0
+derecha = 0
+#hago ciclo while
+while(opcion != 4):
+    #imprimo opciones
+    print("\n1)Senado\n2)Camara\n3)Consulta\n4)salir\n5)Mostrar votos")
+    #Digito opcion
+    opcion = int(input("Ingrese una opcion del menu: "))
+
+    #Condiciones para cada opcion
+    if opcion == 1:
+        senado += 1 
+    elif opcion == 2:
+        camara += 1
+    elif opcion == 3:
+        print("\n  1)pacto\n  2)centro\n  3)derecha\n  4)salir\n")
+
+        #Evaluar condicion del usuario
+        opcion2 = int(input("Ingrese una opcion: "))
+
+        if opcion2 == 1:
+            pacto += 1
+        elif opcion2 == 2:
+            centro += 1
+        elif opcion2 == 3:
+            derecha += 1
+    elif opcion == 5:
+        #imprimir votos
+        print(f'Senado: {senado}\nCamara: {camara}\nPacto: {pacto}\nCentro: {centro}\nDerecha: {derecha}') 
 
 
